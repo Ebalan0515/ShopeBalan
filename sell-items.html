@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sell an Item — ShopEbalan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="subpage-body">
+
+  <div class="subpage-topbar">
+    <a href="dashboard.html" class="back-link">← Back to dashboard</a>
+    <div class="brand-mark"><span class="dot"></span> ShopEbalan</div>
+  </div>
+
+  <main class="subpage-main">
+    <div class="browse-header">
+      <h1>Sell an Item</h1>
+      <p>List an in-game item, currency, or boost. Just the name and your price — buyers can reach out from there.</p>
+      <span class="stat-badge" id="activeCountBadge">0 active listings</span>
+    </div>
+
+    <div class="field">
+      <label for="itemName">Item name</label>
+      <input type="text" id="itemName" class="qty-input" placeholder="e.g. Dominus Frigidus, 500 Coins, Speed Boost x10" />
+    </div>
+    <div class="field">
+      <label for="itemPrice">Your price (₱)</label>
+      <input type="number" id="itemPrice" class="qty-input" placeholder="e.g. 120" min="1" step="1" />
+    </div>
+    <div class="field">
+      <label for="itemDetails">Details (optional)</label>
+      <textarea id="itemDetails" class="textarea-input" placeholder="Which game it's from, condition, delivery notes, etc."></textarea>
+    </div>
+
+    <div class="message error" id="listingError"></div>
+    <div class="message success" id="listingSuccess"></div>
+
+    <button type="button" class="btn-buy-now" id="listNowBtn" style="max-width: 320px;">List for sale</button>
+
+    <section class="content-section listings-section">
+      <h2>Your active listings</h2>
+      <div id="listingsContainer">
+        <p class="empty-state">Loading your listings...</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script type="module" src="sell-items.js"></script>
+</body>
+</html>

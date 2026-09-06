@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ShopEbalan</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body style="display:flex;align-items:center;justify-content:center;min-height:100vh;">
+  <p class="loader-line">Loading...</p>
+
+  <script type="module">
+    import { auth } from "./firebase-config.js";
+    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
+
+    onAuthStateChanged(auth, (user) => {
+      if (user && user.emailVerified) {
+        window.location.href = "dashboard.html";
+      } else if (user && !user.emailVerified) {
+        window.location.href = "verify.html";
+      } else {
+        window.location.href = "login.html";
+      }
+    });
+  </script>
+</body>
+</html>

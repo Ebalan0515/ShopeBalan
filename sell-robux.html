@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sell Robux — ShopEbalan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="subpage-body">
+
+  <div class="subpage-topbar">
+    <a href="dashboard.html" class="back-link">← Back to dashboard</a>
+    <div class="brand-mark"><span class="dot"></span> ShopEbalan</div>
+  </div>
+
+  <main class="subpage-main">
+    <div class="product-layout">
+
+      <div class="product-top-row">
+        <h1>Sell Robux</h1>
+        <span class="stat-badge" id="activeCountBadge">0 active listings</span>
+      </div>
+
+      <div>
+        <div class="product-hero">
+          <div class="hero-badges">
+            <span class="hero-badge">Set your own amount</span>
+            <span class="hero-badge">Set your own price</span>
+            <span class="hero-badge">Reach real buyers</span>
+          </div>
+
+          <div class="hero-illustration">
+            <svg viewBox="0 0 160 160" fill="none">
+              <defs>
+                <linearGradient id="gemGradSell" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#f4c968"/>
+                  <stop offset="100%" stop-color="#c98a2e"/>
+                </linearGradient>
+              </defs>
+              <path d="M80 12 L140 52 L118 132 H42 L20 52 Z" fill="url(#gemGradSell)" stroke="#fff2d6" stroke-width="2"/>
+              <path d="M80 12 L80 132 M20 52 H140 M46 52 L80 12 L114 52 M46 52 L64 132 M114 52 L96 132" stroke="#fff2d6" stroke-width="1.4" opacity="0.5"/>
+              <circle cx="118" cy="34" r="5" fill="#fff" opacity="0.85"/>
+              <circle cx="128" cy="46" r="2.5" fill="#fff" opacity="0.6"/>
+            </svg>
+          </div>
+
+          <div class="hero-side">
+            <div class="eta-block">
+              <div class="eta-value">You set the price</div>
+              <div class="eta-label">No fixed rate — it's your listing</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="trust-row">
+          <span class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3l7 3v6c0 4.4-3 8.4-7 9-4-.6-7-4.6-7-9V6l7-3Z"/></svg> SSL secure</span>
+          <span class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg> Verified seller account</span>
+          <span class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg> 24/7 support</span>
+          <span class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 7h16v10H4zM4 7l8 5 8-5"/></svg> Cashback 5%</span>
+        </div>
+
+        <section class="content-section">
+          <h2>How selling works</h2>
+          <ol>
+            <li>Set how much Robux you're offering and your asking price</li>
+            <li>Your listing shows up for buyers browsing Buy Robux</li>
+            <li>When someone buys, we'll notify you to complete delivery</li>
+            <li>Get paid once the delivery is confirmed</li>
+          </ol>
+        </section>
+
+        <section class="content-section">
+          <h2>Delivery methods</h2>
+          <p>Pick whichever method fits how you'll deliver the Robux to a buyer.</p>
+
+          <div class="subsection">
+            <h3>Game Pass delivery</h3>
+            <p>You create a Game Pass and sell it to the buyer's account. Usually takes 30–60 minutes, though the payout may stay pending for about 6–7 days on Roblox's side.</p>
+          </div>
+
+          <div class="subsection">
+            <h3>Official store delivery</h3>
+            <p>You log into the buyer's account (with their permission) and purchase Robux directly. Faster, but the amount per transaction is limited by the store.</p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>Requirements</h2>
+          <ul class="plain">
+            <li>An active Roblox account</li>
+            <li>Address and contact number saved to your profile</li>
+          </ul>
+        </section>
+
+        <section class="content-section listings-section">
+          <h2>Your active listings</h2>
+          <div id="listingsContainer">
+            <p class="empty-state">Loading your listings...</p>
+          </div>
+        </section>
+      </div>
+
+      <aside class="purchase-panel">
+        <label for="robuxAmount">Robux amount</label>
+        <input type="number" id="robuxAmount" class="qty-input" value="1000" min="100" max="100000" step="100" />
+        <input type="range" id="robuxAmountSlider" class="qty-slider" min="100" max="100000" step="100" value="1000" />
+        <div class="qty-range-labels"><span>100</span><span>100,000</span></div>
+
+        <label for="listingPrice">Your price (₱)</label>
+        <input type="number" id="listingPrice" class="qty-input" value="250" min="1" step="1" />
+
+        <label>Delivery type</label>
+        <label class="radio-option">
+          <input type="radio" name="sellDeliveryType" value="gamepass" checked />
+          Game Pass delivery
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="sellDeliveryType" value="store" />
+          Official store delivery
+        </label>
+
+        <label for="listingNotes">Notes for buyers (optional)</label>
+        <textarea id="listingNotes" class="textarea-input" placeholder="e.g. Fastest during evenings, message me before ordering"></textarea>
+
+        <div class="message error" id="listingError"></div>
+        <div class="message success" id="listingSuccess"></div>
+
+        <button type="button" class="btn-buy-now" id="listNowBtn">List for sale</button>
+      </aside>
+
+    </div>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script type="module" src="sell-robux.js"></script>
+</body>
+</html>

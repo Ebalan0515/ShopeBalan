@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Buy Robux — ShopEbalan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="subpage-body">
+
+  <div class="subpage-topbar">
+    <a href="dashboard.html" class="back-link">← Back to offers</a>
+    <div class="brand-mark"><span class="dot"></span> ShopEbalan</div>
+  </div>
+
+  <main class="subpage-main">
+    <div class="browse-header">
+      <h1>Buy Robux</h1>
+      <p>Every listing below is posted by a real seller — amount, price, and delivery method are entirely up to them. Pick the one that works for you.</p>
+    </div>
+
+    <div class="trust-row">
+      <span class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3l7 3v6c0 4.4-3 8.4-7 9-4-.6-7-4.6-7-9V6l7-3Z"/></svg> SSL secure</span>
+      <span class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg> Verified sellers</span>
+      <span class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg> 24/7 support</span>
+      <span class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 7h16v10H4zM4 7l8 5 8-5"/></svg> Cashback 5%</span>
+    </div>
+
+    <div id="listingsResults" class="listing-buy-grid"></div>
+
+    <section class="content-section">
+      <h2>How buying works</h2>
+      <ol>
+        <li>Pick a listing that has the amount and delivery type you want</li>
+        <li>Tap Buy now to reach out to that seller</li>
+        <li>They'll deliver using their chosen method — Game Pass or official store</li>
+      </ol>
+    </section>
+
+    <section class="content-section">
+      <h2>Delivery methods explained</h2>
+      <div class="subsection">
+        <h3>Game Pass delivery</h3>
+        <p>The seller creates a Game Pass and sells it to your account. Usually takes 30–60 minutes, though the payout may stay pending on Roblox's side for about 6–7 days.</p>
+      </div>
+      <div class="subsection">
+        <h3>Official store delivery</h3>
+        <p>The seller logs into your account (with your permission) and buys Robux directly from the official store. Faster, but the amount per transaction is limited.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Requirements</h2>
+      <ul class="plain">
+        <li>An active Roblox account</li>
+      </ul>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script type="module" src="buy-robux.js"></script>
+</body>
+</html>

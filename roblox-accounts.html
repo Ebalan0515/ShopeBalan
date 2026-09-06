@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Roblox Accounts — ShopEbalan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="subpage-body">
+
+  <div class="subpage-topbar">
+    <a href="dashboard.html" class="back-link">← Back to offers</a>
+    <div class="brand-mark"><span class="dot"></span> ShopEbalan</div>
+  </div>
+
+  <main class="subpage-main">
+    <div class="browse-header">
+      <h1>Roblox Accounts</h1>
+      <p>Browse ready-to-play accounts for a wide range of experiences. Every listing is maintained and sold by real sellers, with achievements and cosmetics already unlocked — delivered safely and fast.</p>
+
+      <div class="trust-row">
+        <span class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6Z"/></svg> Instant delivery</span>
+        <span class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3l7 3v6c0 4.4-3 8.4-7 9-4-.6-7-4.6-7-9V6l7-3Z"/></svg> SSL secure</span>
+        <span class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg> Handmade, 100% safe</span>
+        <span class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg> 24/7 support</span>
+        <span class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 7h16v10H4zM4 7l8 5 8-5"/></svg> Cashback 5%</span>
+        <span class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 7h10v10H7z"/><path d="M3 3l4 4M21 3l-4 4M3 21l4-4M21 21l-4-4"/></svg> Safe transfer</span>
+        <span class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2l2.9 6 6.6.6-5 4.4 1.5 6.5L12 16l-5.9 3.5L7.6 13l-5-4.4 6.6-.6Z"/></svg> Exclusive content</span>
+      </div>
+    </div>
+
+    <div id="categoryGrid" class="category-grid"></div>
+
+    <div class="search-row">
+      <input type="text" id="searchInput" class="search-input" placeholder="Search experiences..." />
+    </div>
+
+    <div class="filter-row">
+      <div class="filter-dropdown">
+        <button type="button" class="filter-btn">
+          <span class="filter-btn-label">Price</span>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M5 7l5 6 5-6z"/></svg>
+        </button>
+        <div class="filter-panel">
+          <button type="button">Under ₱500</button>
+          <button type="button">₱500 – ₱1,500</button>
+          <button type="button">₱1,500 and up</button>
+        </div>
+      </div>
+
+      <div class="filter-dropdown">
+        <button type="button" class="filter-btn">
+          <span class="filter-btn-label">Experience</span>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M5 7l5 6 5-6z"/></svg>
+        </button>
+        <div class="filter-panel">
+          <button type="button">Beginner-friendly</button>
+          <button type="button">Mid progress</button>
+          <button type="button">Endgame / maxed</button>
+        </div>
+      </div>
+
+      <div class="filter-dropdown">
+        <button type="button" class="filter-btn">
+          <span class="filter-btn-label">Account type</span>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M5 7l5 6 5-6z"/></svg>
+        </button>
+        <div class="filter-panel">
+          <button type="button">Starter</button>
+          <button type="button">Premium</button>
+          <button type="button">OG / rare</button>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-heading" id="listingsHeading">Select a game above to see listings</h2>
+    <div id="listingsResults" class="listing-buy-grid"></div>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script type="module" src="roblox-accounts.js"></script>
+</body>
+</html>

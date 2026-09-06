@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Verify Your Email — ShopEbalan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <section class="brand-panel">
+    <div class="brand-mark"><span class="dot"></span> ShopEbalan</div>
+
+    <div class="brand-hero">
+      <h1>One step left <span class="accent-word">before we begin.</span></h1>
+      <p>We just need to confirm this email address really belongs to you.</p>
+    </div>
+
+    <div class="brand-footer">
+      <span><strong>Secure</strong> — protected by Firebase Auth</span>
+    </div>
+  </section>
+
+  <section class="form-panel">
+    <div class="card status-card">
+      <div class="status-icon">✉️</div>
+      <h2>Check your inbox</h2>
+      <p class="subtitle" id="verifyText">
+        We sent a verification link to your email. Click the link to activate your account, then come back here.
+      </p>
+
+      <div class="message error" id="errorMsg"></div>
+      <div class="message success" id="successMsg"></div>
+
+      <button type="button" class="btn btn-primary" id="checkBtn">I've verified it, continue</button>
+      <button type="button" class="btn btn-google" id="resendBtn" style="margin-top:12px;">Resend verification email</button>
+
+      <p class="switch-line"><a href="#" id="logoutLink">Log out and use a different account</a></p>
+    </div>
+  </section>
+
+  <script type="module" src="verify.js"></script>
+</body>
+</html>
